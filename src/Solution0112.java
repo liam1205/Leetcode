@@ -4,17 +4,17 @@ import java.util.Stack;
 
 public class Solution0112 {
 
-    public static boolean hasPathSum(TreeNode root, int targetSum) {
+    public static boolean hasPathSumRuntimeOptimized(TreeNode root, int targetSum) {
         if (root == null) {
             return false;
         }
         if (root.left == null && root.right == null) {
             return root.val == targetSum;
         }
-        return hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.val);
+        return hasPathSumRuntimeOptimized(root.left, targetSum - root.val) || hasPathSumRuntimeOptimized(root.right, targetSum - root.val);
     }
 
-    public static boolean hasPathSumNotOptimized(TreeNode root, int targetSum) {
+    public static boolean hasPathSumMemoryOptimized(TreeNode root, int targetSum) {
         if (root == null) {
             return false;
         }
@@ -48,6 +48,6 @@ public class Solution0112 {
         root.right.left = new TreeNode(13);
         root.right.right = new TreeNode(4);
         root.right.right.right = new TreeNode(1);
-        System.out.println(hasPathSum(root, 22));
+        System.out.println(hasPathSumMemoryOptimized(root, 22));
     }
 }
