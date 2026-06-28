@@ -4,7 +4,6 @@ class Solution:
         nums.sort()
         i = 0
         while i < len(nums):
-            num1 = nums[i]
             if i > 0 and nums[i] == nums[i-1]:
                 i += 1
                 continue
