@@ -11,13 +11,17 @@ class Solution:
 
         while q:
             prefix = q.popleft()
+            print(f"Popped: {repr(prefix)!s:10} | queue: {list(q)}")
 
             if len(prefix) == len(digits):
                 result.append(prefix)
-            else: 
+                print(f"  -> Complete! Added {repr(prefix)} to result")
+            else:
                 digit = digits[len(prefix)]
-                for letter in self.mappings[digit]:
-                    q.append(prefix + letter)
+                new_items = [prefix + letter for letter in self.mappings[digit]]
+                print(f"  -> Digit '{digit}' maps to {self.mappings[digit]}, pushing {new_items}")
+                for item in new_items:
+                    q.append(item)
 
         return result
         

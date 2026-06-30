@@ -9,7 +9,6 @@ class Solution:
                 continue
             j, k = i + 1, len(nums) - 1
             while j < k:
-                print(f"({i}{j}{k})")
                 s = nums[i] + nums[j] + nums[k]
                 if s == 0:
                     result.append([nums[i], nums[j], nums[k]])
