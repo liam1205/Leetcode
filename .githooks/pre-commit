@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Regenerates the solved-count stats in README.md before each commit.
+set -euo pipefail
+
+repo_root=$(git rev-parse --show-toplevel)
+python3 "$repo_root/scripts/update_readme.py"
+
+git add "$repo_root/README.md"
