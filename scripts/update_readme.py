@@ -36,11 +36,9 @@ def count_solutions():
 
 
 def build_stats_block(counts):
-    total = sum(counts.values())
     lines = [START_MARKER, "", "| Language | Solved |", "| --- | --- |"]
     for language, count in counts.items():
         lines.append(f"| {language} | {count} |")
-    lines.append(f"| **Total** | **{total}** |")
     lines.append("")
     lines.append(END_MARKER)
     return "\n".join(lines)

@@ -10,6 +10,5 @@ Solutions to Leetcode problems.
 | --- | --- |
 | Python | 17 |
 | Java | 41 |
-| **Total** | **58** |
 
 <!-- STATS:END -->
