@@ -8,7 +8,7 @@ Solutions to Leetcode problems.
 
 | Language | Solved |
 | --- | --- |
-| Python | 17 |
+| Python | 18 |
 | Java | 41 |
 
 <!-- STATS:END -->
